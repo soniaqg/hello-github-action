@@ -6,8 +6,8 @@ inputs:
     required: true
 outputs:
   nombre:
-  description: 'mi nombre'
-  required: true
+    description: 'mi nombre'
+    required: true
   
 runs:
   using: 'composite'
