@@ -4,7 +4,13 @@ inputs:
   nombre:
     description: 'mi nombre'
     required: true
-    default: 'Pablo'
+    default: ' '
+outputs:
+  nombre:
+  description: 'mi nombre'
+  required: true
+  defautl: ' '
+  
 runs:
   using: 'composite'
   steps:
