@@ -37,3 +37,6 @@ jobs:
         uses: ./actions/actionsonia
         with:
           nombre: Sonia
+      - name: Run an action with an output
+        id: a
+        run: echo Adios ${{ steps.a.outputs.despedida }}
