@@ -34,6 +34,6 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: Run an action programmed
-        uses: actions/actionsonia
+        uses: ./actions/actionsonia
         with:
           nombre: Sonia
