@@ -6,8 +6,8 @@ inputs:
     required: true
 outputs:
   nombre:
-    description: 'mi nombre'
-    value: ${{ inputs.nombre }}
+    description: 'despedida'
+    value: 'a todos'
   
 runs:
   using: 'composite'
