@@ -39,5 +39,6 @@ jobs:
         with:
           nombre: Sonia
       - name: Run an action with an output
-        run: echo Adios ${{ steps.a.outputs.nombre }}
-        shell: bash
+        uses: ./actions/actiondespedida
+        with: 
+          nombre: ${{ steps.a.outputs.nombre }}
