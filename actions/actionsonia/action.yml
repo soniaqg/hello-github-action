@@ -4,12 +4,10 @@ inputs:
   nombre:
     description: 'mi nombre'
     required: true
-    default: ' '
 outputs:
   nombre:
   description: 'mi nombre'
   required: true
-  defautl: ' '
   
 runs:
   using: 'composite'
