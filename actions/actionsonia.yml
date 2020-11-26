@@ -1,0 +1,6 @@
+name: 'Accion invocada'
+description: 'imprimir Hola $nombre'
+inputs:
+  nombre:
+    description: 'mi nombre'
+    required: true
