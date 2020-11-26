@@ -4,6 +4,7 @@ inputs:
   nombre:
     description: 'mi nombre'
     required: true
+    default: 'Pablo'
     
-run: echo Hola ${{inputs.nombre}}.
+run: echo Hola ${{ inputs.nombre }}.
 shell: bash
