@@ -40,3 +40,4 @@ jobs:
           nombre: Sonia
       - name: Run an action with an output
         run: echo Adios ${{ steps.a.outputs.despedida }}
+        shell: bash
