@@ -1,0 +1,12 @@
+name: 'accion_despedida'
+description: 'imprimir Adios a todos'
+inputs:
+  nombre:
+    description: 'despedida'
+    required: true
+  
+runs:
+  using: 'composite'
+  steps:
+    - run: echo Adios ${{ inputs.nombre }}.
+      shell: bash
