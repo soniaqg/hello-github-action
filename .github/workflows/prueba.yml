@@ -34,9 +34,9 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: Run an action programmed
+        id: a
         uses: ./actions/actionsonia
         with:
           nombre: Sonia
       - name: Run an action with an output
-        id: a
         run: echo Adios ${{ steps.a.outputs.despedida }}
