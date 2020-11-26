@@ -5,6 +5,9 @@ inputs:
     description: 'mi nombre'
     required: true
     default: 'Pablo'
+runs:
+  using: 'composite'
+  steps:
+    - run: echo Hola ${{ inputs.nombre }}.
+      shell: bash
     
-run: echo Hola ${{ inputs.nombre }}.
-shell: bash
