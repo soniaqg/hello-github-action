@@ -51,7 +51,7 @@ jobs:
         run: |
           echo "el dia de la semana es: ${{ env.dia }}"
       - name: Make changes to PR
-        run: Soy Sonia > hola.txt
+        run: echo "Soy Sonia" > hola.txt
 
       - name: Create Pull Request
         id: create_pr
