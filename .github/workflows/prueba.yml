@@ -50,3 +50,18 @@ jobs:
       - name: Get dia value
         run: |
           echo "el dia de la semana es: ${{ env.dia }}"
+      - name: Make changes to PR
+        run: Soy Sonia > hola.txt
+
+      - name: Create Pull Request
+        id: create_pr
+        uses: peter-evans/create-pull-request@v3.5.1
+        with:
+          token:
+          commit-message: Update file hola
+          branch: prueba-PR2
+          delete-branch: false
+      - name: Check outputs
+        run: |
+          echo "Pull Request Number - ${{ steps.create_pr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.create_pr.outputs.pull-request-url }}"
