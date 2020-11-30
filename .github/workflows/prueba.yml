@@ -31,6 +31,9 @@ jobs:
           echo Hello, world!
           pwd
           ls 
+          dia=lunes
+          echo "dia: $dia"
+          echo "dia=${dia}" >> $GITHUB_ENV
         
       # Runs a set of commands using the runners shell
       - name: Run an action programmed
@@ -38,7 +41,12 @@ jobs:
         uses: ./actions/actionsonia
         with:
           nombre: Sonia
+
       - name: Run an action with an output
         uses: ./actions/actiondespedida
         with: 
           nombre: ${{ steps.a.outputs.nombre }}
+
+      - name: Get dia value
+        run: |
+          echo "el dia de la semana es: ${{ env.dia }}"
