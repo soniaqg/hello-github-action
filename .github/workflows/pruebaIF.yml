@@ -39,7 +39,7 @@ jobs:
 
       - name: Use of IF
         run: |
-          if ${{ $dia -eq lunes }}
+          if ${{ env.dia -eq lunes }}
           then
             echo "Hoy es lunes"
           else
