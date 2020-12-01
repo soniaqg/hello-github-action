@@ -57,8 +57,8 @@ jobs:
         run: |
           git config --global user.name $GITHUB_ACTOR
           git pull
-          git branch prueba-PR || true
-          git checkout prueba-PR
+          git branch prueba-PR1 || true
+          git checkout prueba-PR1
           echo "Soy Sonia" >> hola.txt
           git add hola.txt
           git commit -m "commit automatizado desde el workflow"
@@ -72,7 +72,7 @@ jobs:
           token: ${{ secrets.PERSONAL_TOKEN }}
           title: Prueba creación PR terceros
           commit-message: Update file hola
-          branch: prueba-PR
+          branch: prueba-PR1
           delete-branch: false
       - name: Check outputs
         run: |
