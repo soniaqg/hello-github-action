@@ -33,13 +33,13 @@ jobs:
           echo Hello, Sonia!
           pwd
           ls 
-          dia=martes
+          dia=$(date)
           echo "dia: $dia"
           echo "dia=${dia}" >> $GITHUB_ENV
 
       - name: Use of IF
         run: |
-          if ${{ env.dia == 'lunes' }}
+          if ${{ $(echo env.dia | grep Mon | wc -l) -eq 1 }}
           then
             echo "Hoy es lunes"
           else
