@@ -59,10 +59,11 @@ jobs:
           git pull
           git branch prueba-PR1 || true
           git checkout prueba-PR1
-          echo "Soy Sonia" >> hola.txt
+          git pull -f --rebase origin prueba-PR1 || true
+          fecha=$(date)
+          echo "Soy Sonia. Hoy es: $fecha" >> hola.txt 
           git add hola.txt
           git commit -m "commit automatizado desde el workflow"
-          git pull -f --rebase origin prueba-PR1 || true
           git branch -r 
           if [ $(git branch -r | grep "prueba-PR1" | wc -l) -eq 0 ]
           then
