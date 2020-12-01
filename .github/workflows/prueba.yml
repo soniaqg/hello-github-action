@@ -59,7 +59,8 @@ jobs:
           git pull
           git branch prueba-PR1 || true
           git checkout prueba-PR1
-          git pull -f --rebase origin prueba-PR1 || true
+          # git pull -f --rebase origin prueba-PR1 || true
+          git pull -f -r || true
           fecha=$(date)
           echo "Soy Sonia. Hoy es: $fecha" >> hola.txt 
           git add hola.txt
