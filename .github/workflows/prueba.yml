@@ -50,9 +50,16 @@ jobs:
       - name: Get dia value
         run: |
           echo "el dia de la semana es: ${{ env.dia }}"
-      - name: Make changes to PR
-        run: echo Soy Sonia >> hola.txt
 
+      - name: Make changes to PR
+        run: |
+          git config user.name $GITHUB_ACTOR
+          git checkout prueba-PR
+          echo Soy Sonia >> hola.txt
+          git add hola.txt
+          git commit -m "commit automatizado desde el workflow"
+          git push
+       
       - name: Create Pull Request
         id: create_pr
         uses: peter-evans/create-pull-request@v3.5.1
