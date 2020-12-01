@@ -39,7 +39,7 @@ jobs:
 
       - name: Use of IF
         run: |
-          if ${{ $(echo env.dia | grep Mon | wc -l) -eq 1 }}
+          if [ $(echo ${{ env.dia }} | grep Mon | wc -l) -eq 1 ]
           then
             echo "Hoy es lunes"
           else
