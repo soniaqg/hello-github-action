@@ -65,7 +65,7 @@ jobs:
 
           # git pull -f --rebase origin prueba-PR1 || true
           echo "Primer git pull:"
-          git pull -f -r || true
+          git pull -f origin prueba-PR1
 
           fecha=$(date +%s)
           echo "Soy Sonia. Hoy es: $fecha" >> "hola_$fecha.txt" 
@@ -77,7 +77,7 @@ jobs:
           git commit -m "commit automatizado desde el workflow"
 
           echo "Segundo Git pull:"
-          git pull -f -r origin prueba-PR1 || true
+          git pull -f origin prueba-PR1
           
           echo "Branches remotas activas:"
           git branch -r 
