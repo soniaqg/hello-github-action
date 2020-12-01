@@ -57,7 +57,7 @@ jobs:
         id: create_pr
         uses: peter-evans/create-pull-request@v3.5.1
         with:
-          token: GITHUB_TOKEN
+          token: ${{ secret.PERSONAL_TOKEN }}
           title: Prueba creación PR terceros
           commit-message: Update file hola
           branch: prueba-PR
