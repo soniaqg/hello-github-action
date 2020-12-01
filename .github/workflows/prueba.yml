@@ -72,7 +72,8 @@ jobs:
             git push --set-upstream origin prueba-PR1
           else
             echo "Existe branch"
-            git push 
+            # git push 
+            git push --set-upstream origin prueba-PR1
           fi
        
       - name: Create Pull Request
