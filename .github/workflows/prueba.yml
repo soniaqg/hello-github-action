@@ -78,10 +78,12 @@ jobs:
         uses: peter-evans/create-pull-request@v3.5.1
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
-          title: Prueba creación PR terceros
+          title: 'Prueba creación PR terceros'
           commit-message: Update file hola
           branch: prueba-PR1
+          base: main
           delete-branch: false
+
       - name: Check outputs
         run: |
           echo "Pull Request Number - ${{ steps.create_pr.outputs.pull-request-number }}"
