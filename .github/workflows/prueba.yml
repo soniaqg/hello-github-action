@@ -57,15 +57,29 @@ jobs:
         run: |
           git config --global user.name $GITHUB_ACTOR
           git pull
+          echo "Git branch:"
           git branch prueba-PR1 || true
+
+          echo "Git checkout:"
           git checkout prueba-PR1
+
           # git pull -f --rebase origin prueba-PR1 || true
+          echo "Primer git pull:"
           git pull -f -r || true
+
           fecha=$(date +%s)
           echo "Soy Sonia. Hoy es: $fecha" >> "hola_$fecha.txt" 
+
+          echo "Git Add:"
           git add .
+
+          echo "Git Commit:"
           git commit -m "commit automatizado desde el workflow"
+
+          echo "Segundo Git pull:"
           git pull -f -r origin prueba-PR1 || true
+          
+          echo "Branches remotas activas:"
           git branch -r 
           if [ $(git branch -r | grep "prueba-PR1" | wc -l) -eq 0 ]
           then
