@@ -1,0 +1,40 @@
+# Variable files
+##terraform.tfvars
+*landing.tfvars.json
+*cloud.tfvars.json
+*backend.tfvars.json
+*secret.json
+
+# Compiled files
+*.tfstate
+*.tfstate.backup
+###*.tfvars
+
+# Terraform directory
+.terraform/
+terraform.tfstate.d/
+logs/ 
+
+# Terraform log file
+crash.log
+terraform.log
+
+# Lock
+.terraform.tfstate.lock.info
+
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+
+
+# Others
+.idea/
+
+# postman
+postman/
+
+# App
+target/
+.project
+.settings
+*.iml
