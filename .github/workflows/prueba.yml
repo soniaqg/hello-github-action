@@ -24,6 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          ref: 'main'
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -54,6 +56,8 @@ jobs:
       - name: Make changes to PR
         run: |
           git config user.name $GITHUB_ACTOR
+          git pull
+          git branch prueba-PR || true
           git checkout prueba-PR
           echo "Soy Sonia" >> hola.txt
           git add hola.txt
