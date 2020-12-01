@@ -51,7 +51,7 @@ jobs:
         run: |
           echo "el dia de la semana es: ${{ env.dia }}"
       - name: Make changes to PR
-        run: echo "Soy Sonia" > hola.txt
+        run: echo Soy Sonia >> hola.txt
 
       - name: Create Pull Request
         id: create_pr
@@ -59,7 +59,7 @@ jobs:
         with:
           token:
           commit-message: Update file hola
-          branch: prueba-PR2
+          branch: prueba-PR
           delete-branch: false
       - name: Check outputs
         run: |
