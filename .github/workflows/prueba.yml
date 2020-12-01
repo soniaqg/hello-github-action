@@ -62,6 +62,7 @@ jobs:
           echo "Soy Sonia" >> hola.txt
           git add hola.txt
           git commit -m "commit automatizado desde el workflow"
+          git pull
           git push --set-upstream origin prueba-PR
        
       - name: Create Pull Request
