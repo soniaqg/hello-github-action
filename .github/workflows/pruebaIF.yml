@@ -30,9 +30,18 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          echo Hello, world!
+          echo Hello, Sonia!
           pwd
           ls 
           dia=lunes
           echo "dia: $dia"
           echo "dia=${dia}" >> $GITHUB_ENV
+
+      - name: Use of IF
+        run: |
+          if ${{ $dia -eq lunes }}
+          then
+            echo "Hoy es lunes"
+          else
+            echo "Hoy no es lunes"
+          fi
