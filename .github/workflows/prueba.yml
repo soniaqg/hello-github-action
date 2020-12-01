@@ -62,8 +62,8 @@ jobs:
           echo "Soy Sonia" >> hola.txt
           git add hola.txt
           git commit -m "commit automatizado desde el workflow"
-          git pull -f --rebase origin prueba-PR
-          git push --set-upstream origin prueba-PR
+          git pull -f --rebase origin prueba-PR1
+          git push --set-upstream origin prueba-PR1
        
       - name: Create Pull Request
         id: create_pr
