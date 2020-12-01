@@ -61,8 +61,8 @@ jobs:
           git checkout prueba-PR1
           # git pull -f --rebase origin prueba-PR1 || true
           git pull -f -r || true
-          fecha=$(date)
-          echo "Soy Sonia. Hoy es: $fecha" >> hola.txt 
+          fecha=$(date +%s)
+          echo "Soy Sonia. Hoy es: $fecha" >> "hola_$fecha.txt" 
           git add hola.txt
           git commit -m "commit automatizado desde el workflow"
           git pull -f -r origin prueba-PR1 || true
