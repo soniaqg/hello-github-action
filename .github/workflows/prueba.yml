@@ -55,7 +55,7 @@ jobs:
         run: |
           git config user.name $GITHUB_ACTOR
           git checkout prueba-PR
-          echo Soy Sonia >> hola.txt
+          echo "Soy Sonia" >> hola.txt
           git add hola.txt
           git commit -m "commit automatizado desde el workflow"
           git push
