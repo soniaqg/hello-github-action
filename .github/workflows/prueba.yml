@@ -63,7 +63,7 @@ jobs:
           git pull -f -r || true
           fecha=$(date +%s)
           echo "Soy Sonia. Hoy es: $fecha" >> "hola_$fecha.txt" 
-          git add hola.txt
+          git add .
           git commit -m "commit automatizado desde el workflow"
           git pull -f -r origin prueba-PR1 || true
           git branch -r 
