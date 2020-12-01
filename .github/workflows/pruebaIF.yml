@@ -33,7 +33,7 @@ jobs:
           echo Hello, Sonia!
           pwd
           ls 
-          dia=lunes
+          dia=martes
           echo "dia: $dia"
           echo "dia=${dia}" >> $GITHUB_ENV
 
