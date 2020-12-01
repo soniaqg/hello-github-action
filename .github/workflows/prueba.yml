@@ -59,10 +59,13 @@ jobs:
           git pull
           git branch prueba-PR1 || true
           git checkout prueba-PR1
-          echo "Soy Sonia" >> hola.txt
+          # git pull -f --rebase origin prueba-PR1 || true
+          git pull -f -r || true
+          fecha=$(date)
+          echo "Soy Sonia. Hoy es: $fecha" >> hola.txt 
           git add hola.txt
           git commit -m "commit automatizado desde el workflow"
-          git pull -f --rebase origin prueba-PR1 || true
+          git pull -f -r origin prueba-PR1 || true
           git branch -r 
           if [ $(git branch -r | grep "prueba-PR1" | wc -l) -eq 0 ]
           then
@@ -70,7 +73,8 @@ jobs:
             git push --set-upstream origin prueba-PR1
           else
             echo "Existe branch"
-            git push 
+            # git push 
+            git push --set-upstream origin prueba-PR1
           fi
        
       - name: Create Pull Request
@@ -78,10 +82,12 @@ jobs:
         uses: peter-evans/create-pull-request@v3.5.1
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
-          title: Prueba creación PR terceros
+          title: 'Prueba creación PR terceros'
           commit-message: Update file hola
           branch: prueba-PR1
+          base: main
           delete-branch: false
+
       - name: Check outputs
         run: |
           echo "Pull Request Number - ${{ steps.create_pr.outputs.pull-request-number }}"
