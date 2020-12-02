@@ -8,7 +8,8 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches:
+      - "main"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,10 +28,19 @@ jobs:
         with:
           ref: 'main'
 
-      - name: pull request
+      - name: 'echo json pull request event'
         run: |
           echo "pull request: ${{ toJson(github.event.pull_request) }} "
 
+      - name: 'if PR 1'
+        if: github.event.pull_request.opened == true
+        run: |
+          echo "if 1"
+
+      - name: 'if PR 2'
+        if: github.event.pull_request.opened == 'true'
+        run: |
+          echo "if 2"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
