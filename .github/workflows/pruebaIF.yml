@@ -28,17 +28,27 @@ jobs:
         with:
           ref: 'main'
 
-     # - name: 'echo json pull request event'
-      #  run: |
-       #   echo "pull request: ${{ toJson(github.event.pull_request) }} "
+      - name: 'event name'
+        run: |
+          echo "pull request: ${{  github.event_name }} "
+
+      - name: 'json pull request event'
+        if: ${{ github.event_name == 'pull_request' }}
+        run: |
+          echo "pull request: ${{ toJson(github.event.pull_request) }} "
 
       - name: 'if PR se ha mergeado'
-        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.merged == true }}
+        if: ${{ ( github.event_name == 'pull_request' && github.event.pull_request.merged == true ) ) }}
         run: |
           echo "PR mergeada"
+
+      - name: 'if PR NO se ha mergeado'
+        if: ${{ ( github.event_name == 'pull_request' && github.event.pull_request.merged == false ) ) }}
+        run: |
+          echo "PR NO mergeada"
           
       - name: 'if PR se ha abierto'
-        if: ${{ github.event_name == 'pull_request' && github.pull_request.state == 'open' }}
+        if: ${{ ( github.event_name == 'pull_request' && github.event.pull_request.state == open ) ) }}
         run: |
           echo "PR abierta"
         
