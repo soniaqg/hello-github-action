@@ -33,7 +33,7 @@ jobs:
        #   echo "pull request: ${{ toJson(github.event.pull_request) }} "
 
       - name: 'if PR se ha abierto'
-        if: ${{ github.event_name == 'pull_request' && github.event.state == 'open' }}
+        if: ${{ github.event_name == 'pull_request' && github.pull_request.state == 'open' }}
         run: |
           echo "PR abierta"
           
