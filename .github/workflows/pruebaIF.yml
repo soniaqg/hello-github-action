@@ -28,19 +28,24 @@ jobs:
         with:
           ref: 'main'
 
-      - name: 'echo json pull request event'
-        run: |
-          echo "pull request: ${{ toJson(github.event.pull_request) }} "
+     # - name: 'echo json pull request event'
+      #  run: |
+       #   echo "pull request: ${{ toJson(github.event.pull_request) }} "
 
+      - name: 'if PR se ha abierto'
+        if: ${{ github.event.pull_request.state == 'open' }}
+        run: |
+          echo "PR abierta"
+
+      - name: 'if PR se ha abierto 2'
+        if: ${{ github.event.pull_request.state == open }}
+        run: |
+          echo "PR abierta"
+          
       - name: 'if PR se ha mergeado'
         if: ${{ github.event.pull_request.merged == true }}
         run: |
           echo "PR mergeada"
-
-      - name: 'if PR se ha abierto'
-        if: ${{ github.event.pull_request.status == 'open' }}
-        run: |
-          echo "PR abierta"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
