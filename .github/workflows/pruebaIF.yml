@@ -38,17 +38,17 @@ jobs:
           echo "pull request: ${{ toJson(github.event.pull_request) }} "
 
       - name: 'if PR se ha mergeado'
-        if: ${{ ( github.event_name == 'pull_request' && github.event.pull_request.merged == true ) ) }}
+        if: ${{ ( github.event_name == 'pull_request' && github.event.pull_request.merged == true ) }}
         run: |
           echo "PR mergeada"
 
       - name: 'if PR NO se ha mergeado'
-        if: ${{ ( github.event_name == 'pull_request' && github.event.pull_request.merged == false ) ) }}
+        if: ${{ ( github.event_name == 'pull_request' && github.event.pull_request.merged == false ) }}
         run: |
           echo "PR NO mergeada"
           
       - name: 'if PR se ha abierto'
-        if: ${{ ( github.event_name == 'pull_request' && github.event.pull_request.state == open ) ) }}
+        if: ${{ ( github.event_name == 'pull_request' && github.event.pull_request.state == open ) }}
         run: |
           echo "PR abierta"
         
