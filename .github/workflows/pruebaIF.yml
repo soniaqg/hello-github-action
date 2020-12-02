@@ -32,15 +32,16 @@ jobs:
       #  run: |
        #   echo "pull request: ${{ toJson(github.event.pull_request) }} "
 
+      - name: 'if PR se ha mergeado'
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.merged == true }}
+        run: |
+          echo "PR mergeada"
+          
       - name: 'if PR se ha abierto'
         if: ${{ github.event_name == 'pull_request' && github.pull_request.state == 'open' }}
         run: |
           echo "PR abierta"
-          
-      - name: 'if PR se ha mergeado'
-        if: ${{ github.event.pull_request.merged == true }}
-        run: |
-          echo "PR mergeada"
+        
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
