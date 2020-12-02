@@ -36,11 +36,6 @@ jobs:
         if: ${{ github.event.pull_request.state == 'open' }}
         run: |
           echo "PR abierta"
-
-      - name: 'if PR se ha abierto 2'
-        if: ${{ github.event.pull_request.state == open }}
-        run: |
-          echo "PR abierta"
           
       - name: 'if PR se ha mergeado'
         if: ${{ github.event.pull_request.merged == true }}
