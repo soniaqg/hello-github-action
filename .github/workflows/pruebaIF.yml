@@ -29,6 +29,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
+        if: ${{github.event_nombre == 'pull_request'}}
         run: |
           echo Hello, Sonia!
           pwd
