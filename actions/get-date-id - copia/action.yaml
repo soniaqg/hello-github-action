@@ -1,0 +1,15 @@
+name: 'Id from actual date'
+description: 'Id from actual date'
+outputs:
+  date_id:
+    description: "Date id"
+    value: ${{ steps.create-date-id.outputs.DATE_ID }}
+runs:
+  using: "composite"
+  steps:
+    - name: Reset the values of the changelog.json file
+      id: create-date-id
+      run: |
+        OUTPUT=$(node ${{ github.action_path }}/app.js)
+        echo ::set-output  name=DATE_ID::"${OUTPUT}"
+      shell: bash
