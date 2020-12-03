@@ -83,4 +83,7 @@ jobs:
       - name: Run an action with app.js
         id: js
         uses: ./actions/actionjs
-             
+
+      - name: Run an action with app.js
+        id: calc
+        uses: ./actions/actioncalcular
