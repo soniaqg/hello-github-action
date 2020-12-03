@@ -12,4 +12,5 @@ runs:
       run: |
         OUTPUT=$(node ${{ github.action_path }}/app.js)
         echo ::set-output  name=DATE_ID::"${OUTPUT}"
+        echo fecha: $OUTPUT
       shell: bash
