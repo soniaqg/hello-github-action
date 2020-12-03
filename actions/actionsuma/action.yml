@@ -20,6 +20,7 @@ runs:
       id: resultado_suma
       run: |
         echo ${{inputs.num1}} + ${{inputs.num2}}
+        echo suma=$((${{inputs.num1}} + ${{inputs.num2}}))
         RESULTADO_SUMA= $( 'expr ${{inputs.num1}} + ${{inputs.num2}}' )
         echo "::set-output name=suma::$RESULTADO_SUMA"
       shell: bash
