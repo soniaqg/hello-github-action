@@ -79,4 +79,3 @@ jobs:
         with:
           num1: 3
           num2: 5
-        run: echo suma = ${{ steps.suma.outputs.suma }}
