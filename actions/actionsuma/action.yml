@@ -17,5 +17,5 @@ outputs:
 runs:
   using: 'composite'
   steps:
-    - run: echo ${{inputs.num1}} + ${{inputs.num2}} = "set-output name=suma::$((inputs.num1 + inputs.num2))"
+    - run: echo ${{inputs.num1}} mas ${{inputs.num2}} = "set-output name=suma::$((inputs.num1 + inputs.num2))"
       shell: bash
