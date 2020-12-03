@@ -72,3 +72,9 @@ jobs:
           else
             echo "Hoy no es lunes"
           fi
+      
+      - name: Suma
+        uses: ./actions/actionsuma
+        with:
+          num1: 3
+          num2: 5

@@ -1,0 +1,21 @@
+name: 'Accion calculadora'
+description: 'sumar dos números pasados por el workflow'
+inputs:
+  num1:
+    description: 'primer número'
+    required: true
+
+  num2:
+    description: 'segundo número'
+    required: true
+
+outputs:
+  suma:
+    description: 'suma de los dos inputs'
+    value: $((inputs.num1 + inputs.num2))
+  
+runs:
+  using: 'composite' #??
+  steps:
+    - run: echo suma = ${{ outputs.suma }}
+      shell: bash
