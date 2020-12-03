@@ -1,3 +1,7 @@
+'use strict';
+
+let calcular = Calcular();
+console.log(calcular);
 
 function Calcular(){
     var num1 = 5;
