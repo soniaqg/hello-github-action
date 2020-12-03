@@ -1,0 +1,17 @@
+name: 'Calcular con fichero js'
+description: 'sumar dos números'
+outputs:
+  suma:
+      description: 'resultado suma'
+      value: ${{steps.suma.outputs.suma}}
+
+runs: 
+  using: 'composite'
+  steps:
+    - name: resultado suma
+      id: suma
+      run: |
+        OUTPUT=$(node ${{ github.action_path }}/calcular.js)
+        echo ::set-output  name=suma::"${OUTPUT}"
+        echo resultado: $OUTPUT
+      shell: bash
