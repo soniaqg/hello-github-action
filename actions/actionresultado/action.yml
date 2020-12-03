@@ -1,0 +1,12 @@
+name: 'resultado'
+description: 'printear el resultado de la suma'
+inputs:
+  resultado:
+    description: 'resultado'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    run:
+    

@@ -12,10 +12,14 @@ inputs:
 outputs:
   suma:
     description: 'suma de los dos inputs'
-    value: $((inputs.num1 + inputs.num2))
-
+    value: ${{steps.resultado_suma.outputs.suma}}
 runs:
   using: 'composite'
   steps:
-    - run: echo ${{inputs.num1}} mas ${{inputs.num2}} = "set-output name=suma::$((inputs.num1 + inputs.num2))"
+    - name: resultado suma
+      id: resultado_suma
+      run: |
+        echo ${{inputs.num1}} + ${{inputs.num2}}
+        RESULTADO_SUMA= $( $(( ${{inputs.num1}} + ${{inputs.num2}} )) )
+        echo "::set-output name=suma::$RESULTADO_SUMA"
       shell: bash
