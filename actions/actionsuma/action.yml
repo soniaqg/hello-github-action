@@ -13,9 +13,9 @@ outputs:
   suma:
     description: 'suma de los dos inputs'
     value: $((inputs.num1 + inputs.num2))
-  
+
 runs:
-  using: 'composite' #??
+  using: 'composite'
   steps:
-    - run: echo suma = ${{ outputs.suma }}
+    - run: echo ${{inputs.num1}} + ${{inputs.num2}}
       shell: bash
