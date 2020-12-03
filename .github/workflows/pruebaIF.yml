@@ -80,3 +80,5 @@ jobs:
           num1: 5
           num2: 3
     
+      - name: Run an action with app.js
+        uses: ./actions/actionjs    
