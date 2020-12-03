@@ -39,4 +39,5 @@ runs:
         RESULTADO_RESTA=$((${{inputs.num1}} - ${{inputs.num2}}))
         echo resultado: $RESULTADO_RESTA
         echo "::set-output name=resta::$RESULTADO_RESTA"
+        echo $GITHUB_ACTION
       shell: bash
