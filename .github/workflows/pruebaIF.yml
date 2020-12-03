@@ -81,4 +81,7 @@ jobs:
           num2: 3
     
       - name: Run an action with app.js
-        uses: ./actions/actionjs    
+        id: js
+        uses: ./actions/actionjs
+        run: |
+          echo "steps.js.outputs.DATE_ID"    
