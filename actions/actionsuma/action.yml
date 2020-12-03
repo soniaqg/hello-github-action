@@ -22,6 +22,6 @@ runs:
         echo ${{inputs.num1}} + ${{inputs.num2}}
         echo suma=$((${{inputs.num1}} + ${{inputs.num2}}))
         echo "::set-output name=suma::$((${{inputs.num1}} + ${{inputs.num2}}))"
-        RESULTADO_SUMA= $(${{inputs.num1}} + ${{inputs.num2}})
+        RESULTADO_SUMA= $((${{inputs.num1}} + ${{inputs.num2}}))
         echo "resultado: $RESULTADO_SUMA"
       shell: bash
