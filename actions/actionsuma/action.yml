@@ -29,6 +29,7 @@ runs:
         RESULTADO_SUMA=$((${{inputs.num1}} + ${{inputs.num2}}))
         echo resultado: $RESULTADO_SUMA
         echo "::set-output name=suma::$RESULTADO_SUMA"
+        echo $GITHUB_ACTION
       shell: bash
 
     - name: resultado resta
