@@ -79,6 +79,4 @@ jobs:
         with:
           num1: 5
           num2: 3
-      
-      - name: Run an action with app.js
-        uses: ./actions/get-date-id-copia
+    
