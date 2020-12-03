@@ -13,6 +13,11 @@ outputs:
   suma:
     description: 'suma de los dos inputs'
     value: ${{steps.resultado_suma.outputs.suma}}
+
+  resta:
+    description: 'resta de los dos inputs'
+    value: ${{steps.resultado_resta.outputs.resta}}
+
 runs:
   using: 'composite'
   steps:
@@ -24,4 +29,14 @@ runs:
         RESULTADO_SUMA=$((${{inputs.num1}} + ${{inputs.num2}}))
         echo resultado: $RESULTADO_SUMA
         echo "::set-output name=suma::$RESULTADO_SUMA"
+      shell: bash
+
+    - name: resultado resta
+      id: resultado_resta
+      run: |
+        echo ${{inputs.num1}} - ${{inputs.num2}}
+        echo resta=$((${{inputs.num1}} - ${{inputs.num2}}))
+        RESULTADO_RESTA=$((${{inputs.num1}} - ${{inputs.num2}}))
+        echo resultado: $RESULTADO_RESTA
+        echo "::set-output name=resta::$RESULTADO_RESTA"
       shell: bash
