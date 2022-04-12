@@ -1,0 +1,47 @@
+{
+    "tags": {
+        "department": "digital",
+        "manteinancewindows": "M-F",
+        "businessunit": "digital",
+        "businesscontact": "miguelassan@inditex.com",
+        "managedby": "miguel@inditex.com",
+        "costcenter": "digital",
+        "project": "heimdal",
+        "app": "Heimdal",
+        "svc": " ",
+        "dataclassification": "internal",
+        "datacloud": "DATACLOUD-126",
+        "compliance": "other",
+        "schedule": "12?5/GMT-8",
+        "expirationdate": " "
+    },
+    "tf_provider": [
+        "azure"
+    ],
+    "tf_backend": "azure",
+    "environments": [
+        "dev",
+        "pre",
+        "pro"
+    ],
+    "location": {
+        "name": "westeurope",
+        "short_name": "weu1"
+    },
+    "modules": [
+        {
+            "cloud": "sisifo",
+            "name": "sisifo",
+            "path": "sisifo_init",
+            "properties": {}
+        },
+        {
+            "cloud": "azure",
+            "name": "budget",
+            "path": "azure/budget",
+            "properties": {}
+        }
+    ],
+    "repository_name": "app-heimdal",
+    "sisifo_version": "1.4.2"
+}
