@@ -70,6 +70,16 @@
    "name": "sonia",
    "path": "sisifo_init",
    "properties": {}
+  },
+  {
+   "cloud": "azure",
+   "name": "azure_function",
+   "path": "azure/azure_function",
+   "properties": {
+    "action": "ADD",
+    "automerged": true,
+    "location": "westeurope"
+   }
   }
  ],
  "repository_name": "app-heimdal",
