@@ -64,6 +64,12 @@
    "name": "sisifo",
    "path": "sisifo_init",
    "properties": {}
+  },
+  {
+   "cloud": "aws",
+   "name": "sonia",
+   "path": "sisifo_init",
+   "properties": {}
   }
  ],
  "repository_name": "app-heimdal",
