@@ -150,6 +150,16 @@
     "automerged": true,
     "location": "westeurope"
    }
+  },
+  {
+   "cloud": "azure",
+   "name": "azure_cosmosdb",
+   "path": "azure/azure_cosmosdb",
+   "properties": {
+    "action": "ADD",
+    "automerged": true,
+    "location": "westeurope"
+   }
   }
  ],
  "repository_name": "app-heimdal",
