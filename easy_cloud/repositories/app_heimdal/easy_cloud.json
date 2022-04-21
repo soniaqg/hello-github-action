@@ -222,6 +222,28 @@
     "location": "westeurope",
     "tier": ""
    }
+  },
+  {
+   "cloud": "google",
+   "name": "functions",
+   "path": "functions/google",
+   "properties": {
+    "suffix": "events",
+    "tier": "T1",
+    "runtime": "linux",
+    "location": "westeurope"
+   }
+  },
+  {
+   "cloud": "aws",
+   "name": "lambda",
+   "path": "lambda/aws",
+   "properties": {
+    "suffix": "events",
+    "tier": "T1",
+    "runtime": "linux",
+    "location": "china"
+   }
   }
  ],
  "repository_name": "app-heimdal",
