@@ -244,6 +244,28 @@
     "runtime": "linux",
     "location": "china"
    }
+  },
+  {
+   "cloud": "google",
+   "name": "cosmosdb",
+   "path": "cosmosdb/google",
+   "properties": {
+    "suffix": "events",
+    "tier": "T1",
+    "runtime": "linux",
+    "location": "westeurope"
+   }
+  },
+  {
+   "cloud": "aws",
+   "name": "VM",
+   "path": "VM/aws",
+   "properties": {
+    "suffix": "events",
+    "tier": "T1",
+    "runtime": "linux",
+    "location": "china"
+   }
   }
  ],
  "repository_name": "app-heimdal",
