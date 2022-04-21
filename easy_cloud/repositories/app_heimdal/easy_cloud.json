@@ -212,6 +212,16 @@
    "name": "functions",
    "path": "functions/azure",
    "properties": {}
+  },
+  {
+   "cloud": "azure",
+   "name": "functions",
+   "path": "functions/azure",
+   "properties": {
+    "custom_name": "funciton1",
+    "location": "westeurope",
+    "tier": ""
+   }
   }
  ],
  "repository_name": "app-heimdal",
