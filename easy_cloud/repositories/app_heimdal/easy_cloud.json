@@ -200,6 +200,12 @@
     "automerged": true,
     "location": "westeurope"
    }
+  },
+  {
+   "cloud": "azure",
+   "name": "functions",
+   "path": "functions/azure",
+   "properties": {}
   }
  ],
  "repository_name": "app-heimdal",
