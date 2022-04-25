@@ -53,9 +53,9 @@ jobs:
       - name: Setup branches
         id: setup-branches
         run: |
-          echo "Repository = ${{ github.event.inputs.ENVIRONMENT }}"
-          echo "Component = ${{ github.event.inputs.VERSION }}"
-          echo "Landing zone = ${{ github.event.inputs.ISSUE_NUMBER }}"
+          echo "Repository = ${{ github.event.inputs.REPOSITORY }}"
+          echo "Component = ${{ github.event.inputs.COMPONENT }}"
+          echo "Landing zone = ${{ github.event.inputs.LANDING_ZONE }}"
         
       # Runs a set of commands using the runners shell
       - name: Run an action programmed
