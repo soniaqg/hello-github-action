@@ -12,6 +12,19 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      REPOSITORY:
+        description: 'Repository where PR is going to be opened'
+        required: true
+        default: ''
+      COMPONENT:
+        description: 'Component to be deployed'
+        required: true
+        default: ''
+      LANDING_ZONE:
+        description: 'Landing zone to deploy'
+        required: true
+        default: ''
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -36,6 +49,13 @@ jobs:
           dia=lunes
           echo "dia: $dia"
           echo "dia=${dia}" >> $GITHUB_ENV
+          
+      - name: Setup branches
+        id: setup-branches
+        run: |
+          echo "Repository = ${{ github.event.inputs.ENVIRONMENT }}"
+          echo "Component = ${{ github.event.inputs.VERSION }}"
+          echo "Landing zone = ${{ github.event.inputs.ISSUE_NUMBER }}"
         
       # Runs a set of commands using the runners shell
       - name: Run an action programmed
