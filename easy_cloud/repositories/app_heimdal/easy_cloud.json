@@ -540,6 +540,18 @@
     "runtime": "linux",
     "location": "china"
    }
+  },
+  {
+   "cloud": "dxxb",
+   "name": "fxdf",
+   "path": "dxxb/fxdf",
+   "status": "requested",
+   "properties": {
+    "suffix": "events",
+    "tier": "T1",
+    "runtime": "linux",
+    "location": "china"
+   }
   }
  ],
  "repository_name": "app-heimdal",
